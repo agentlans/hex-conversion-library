@@ -21,7 +21,7 @@ Converts binary data into a string of hexadecimal characters.
 - **`input_len`**: Length of the input binary data in bytes.
 
 #### Example:
-```
+```c
 char binary_data[] = {0x12, 0x34, 0xAB, 0xCD};
 char hex_output; // 2 * 4 bytes + 1 for null terminator
 
@@ -43,7 +43,7 @@ Converts a hexadecimal string back into binary data.
 - Non-zero: Error (e.g., invalid hex character or odd-length input).
 
 #### Example:
-```
+```c
 const char hex_input[] = "1234abcd";
 char binary_output;
 
@@ -57,7 +57,7 @@ if (hex_to_binary(binary_output, hex_input, strlen(hex_input)) == 0) {
 ## Installation
 
 1. Clone this repository:
-   ```
+   ```bash
    git clone https://github.com/agentlans/hex-conversion-library.git
    cd hex-conversion-library
    ```
@@ -67,7 +67,7 @@ if (hex_to_binary(binary_output, hex_input, strlen(hex_input)) == 0) {
    - Add the implementation file (`hex_conversion.c`) to your build system.
 
 3. Compile your project with the library:
-   ```
+   ```bash
    gcc -o my_program my_program.c hex_conversion.c
    ```
 
@@ -77,7 +77,7 @@ A test program for validation is included in the repository (`test_hex_conversio
 
 ### Run Tests:
 Compile and execute the test program:
-```
+```bash
 gcc -o test_hex_conversion test_hex_conversion.c hex_conversion.c
 ./test_hex_conversion
 ```
